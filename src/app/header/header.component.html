@@ -1,0 +1,15 @@
+<div class='dashboard-header'>
+	<div>
+		<button class='dash-search'></button>
+		<button class='dash-alerts'></button>
+		<button (click)="show = !show" class='dash-alerts' style='top: -13px;'>+</button>
+	</div>
+	<div class="wrapper">
+		<div class="header-link" *ngIf="show">
+			<a routerLink="monitor">Add Monitors</a>
+			<a>Remove Monitors</a>
+		</div>
+	</div>
+	<div>		
+	</div>
+</div>

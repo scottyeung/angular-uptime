@@ -1,0 +1,263 @@
+/* You can add global styles to this file, and also import other style files *//* CONTENT HEADER */
+
+			body{
+				overflow:hidden;
+			}
+
+			.dashboard-content.full-width {
+				padding-left: 0;
+			}
+
+			#loading-bar-spinner{
+				position: fixed;
+				left: unset !important;
+				right: 20px !important;
+			}
+
+			.container{    
+				max-width: 100%;
+    			min-width: 100%;
+
+			}
+
+			.dashboard-content{
+			    padding-left: 300px;
+			    max-width: 100%;
+			    background-color:whitesmoke;
+   				max-height: 100vh;
+				transition: all 400ms ease-in 0s;
+				overflow: auto;
+			}
+
+			.dashboard-header{
+				padding:0 25px;
+				border-bottom:1px solid lightgrey;
+				box-shadow: 0 2px 4px -3px rgba(0,0,0,0.4);
+				height:70px;
+				background-color:white;
+			}
+
+			.dashboard-header button{
+			    border: 1px solid lightgrey;
+			    height: 40px;
+			    width: 40px;
+			    margin-top: 15px;
+			    border-radius: 50px;
+			    background-color: white;
+   				margin-left: 10px;
+   				background-size:40%;
+   				background-position:center;
+   				background-repeat:no-repeat;
+   				position:relative;
+   				outline:none;
+			}
+
+			.dashboard-header button:first-of-type{
+				background-image:url(images/search.png);
+			}
+			.dashboard-header button:nth-of-type(2){
+				background-image:url(images/notification.png);
+			}
+
+			.dash-alert-num{
+				position:absolute;
+			    right: -2px;
+			    bottom: -4px;
+				width:16px;
+				height:16px;
+				border-radius:50px;
+				background-color:#e40038;
+				color:white;
+
+			}
+
+
+			.dashboard-header > div{
+				display:inline-block;
+			}
+			.dashboard-header > div:last-of-type{
+				float:right;
+			}
+			.dashboard-page-title {
+				width: 100%;
+				position: relative;
+				display: block;
+				background-color: white;
+				padding: 15px;
+			}
+			.page-title{
+			    padding: 20px 15px;
+			    font-weight:700;
+			}
+
+			.dashboard-recent-alerts .msg.success{ 
+				height: auto;
+			    background-color: #00800042;
+			    padding: 15px 10px;
+			    border-radius: 4px;
+			    border: 1px solid #7bbd7b;
+			    color: #186518; 
+			}
+
+			.dashboard-item {
+				padding:10px;
+			}
+			.dashboard-item.dashboard-full-width {
+				padding:0;
+			}
+			.dashboard-items > div:nth-of-type(4) {
+				padding-right:0px;
+			}
+			.dashboard-items > div:first-of-type {
+				padding-left:0px;
+			}
+
+			.dashboard-item .inner-dashboard-item{
+				background-color:white;
+				border-radius:2px;
+				border:1px solid lightgrey;
+				min-height:200px;
+			}
+
+
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item{
+				padding:0;
+			}
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item h4{
+			    margin: 0;
+			    font-size: 20px;
+			    padding: 15px 20px;
+			    background-color: #4a77b6;
+			    color: white;
+			}
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item table{
+			    display: block; 
+			    margin: 20px 20px;
+
+			}
+
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item table tr{
+				border-bottom:1px solid lightgrey;
+				padding:5px 0;
+			}
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item table thead tr{
+				border-bottom: 2px solid lightgrey;
+				
+			}
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item table tbody tr:hover{
+				cursor:pointer;
+				background-color:#e1e1e1!important;
+				transition:ease-in 200ms all;
+			}
+ 
+    
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item table tbody tr:nth-child(odd){
+				background-color:#f2f2f2;
+			}
+			
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item table td,
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item table th{
+				text-align: left;
+			    padding: 20px 10px 20px 5px;
+			    overflow: hidden;
+			    border: 1px solid lightgrey;
+			}
+
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item table td{
+				font-size:15px;
+			}
+
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item table tr th:first-of-type,
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item table tr td:first-of-type{
+				width:10%;
+			}
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item table tr th ,
+			.dashboard-item.dashboard-full-width  .inner-dashboard-item table tr td {
+				width:15%;
+			}
+
+			.sidebar {
+				z-index: 999;
+			}
+
+			.shrink .logout-slim img{
+				max-width:20px; 
+    			margin-left: -2px;
+
+			}
+			.sidebar-logout-img{
+				max-width:20px;	
+			}
+
+
+			.overlay-authentication{
+				z-index:999;
+				background-color:rgba(0,0,0,0.8);
+				position:fixed;
+				left:0;
+				top:0;
+				width:100%;
+				height:100%;
+				opacity:1;
+				visibility:visible;
+				transition:ease-in 200ms all;
+			}
+			.overlay-authentication > div{
+				width:300px;
+				height:auto;
+				border-radius:4px;
+				background-color:white;
+				margin:12% auto 0;
+				transform:translateY(-50%);
+				text-align:center;
+				overflow:hidden;
+				padding:0px
+			}
+			.overlay-authentication p{
+			    font-size: 19px;
+			    width: 100%;
+			    display: block;
+			    background-color: #e40038;
+			    color: white;
+			    margin:0;
+			    padding: 10px 0;
+			}
+			.loader{
+				border: 12px solid #070078 ;
+			    border-left: 12px solid #e40038;
+			    -webkit-animation: spin 4s linear infinite;
+			    -moz-animation: spin 4s linear infinite;
+			    animation: spin 4s linear infinite;
+			    background-color: transparent;
+			    margin: 20px auto 0;
+			    position: relative;
+			    height: 60px;
+			    width: 60px;
+			    border-radius: 50px;
+			    margin-bottom:20px;
+
+			}
+
+			.overlay-authentication.auth > div{
+				transition:ease-in 200ms all;
+				transform:translateY(-500px);
+				opacity:0;
+			}
+			.overlay-authentication.auth {
+				transition:ease-in 200ms all .2s;
+				visibility: hidden;
+				opacity:0;
+			}
+
+			@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+			@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+			@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+			.error-container{
+				max-width:500px;
+				width:40%;
+			}
+			.close-modal { 
+			    right: 10px;
+			    top: 10px;
+			}

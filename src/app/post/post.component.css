@@ -1,0 +1,15 @@
+.search {
+    left: 20px;
+    position: relative;
+    top: 7px;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.page-title {
+    float: left;
+}
+
+.btn-danger {
+    margin-top: 12px;
+}

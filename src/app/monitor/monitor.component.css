@@ -1,0 +1,17 @@
+input, select, button {
+    width: 200px;
+    margin: 20px;
+    display: block;
+}
+
+label {
+    display: block;
+}
+
+button {
+    margin-top: 24px;
+}
+
+form {
+    min-height: 500px;
+}

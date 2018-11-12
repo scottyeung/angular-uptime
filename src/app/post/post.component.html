@@ -1,0 +1,114 @@
+<div class='dashboard-page-title'>
+					<p class='page-title'>{{siteName}} Dashboard</p>
+					<button class="btn btn-danger" (click)="onDelete()">Delete</button>
+					<input class="search" [(ngModel)]="searchText" placeholder="Search Error Here">
+				</div>
+				<div class='dashboard-page-content'>
+					<div class='container'>
+						<div class='row'>
+							<div class='dashboard-recent-alerts col-xs-12 col-sm-12'>
+								<p class='msg success'>Status - {{siteStatus}}</p>
+							</div>
+						</div>							
+						<div class='row'>
+							<div class='dashboard-items col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+								<nvd3 #nvd3 [options]="options" [data]="data"></nvd3> 
+								<!-- <div class='dashboard-item dashboard-quarter-width dashboard-single-row col-xs-12 col-sm-12 col-md-3'>
+									<div class='inner-dashboard-item'>
+									</div>
+								</div>
+
+								<div class='dashboard-item dashboard-quarter-width dashboard-single-row col-xs-12 col-sm-12 col-md-3'>
+									<div class='inner-dashboard-item'>
+										
+									</div>
+								</div>
+
+								<div class='dashboard-item dashboard-quarter-width dashboard-single-row col-xs-12 col-sm-12 col-md-3'>
+									<div class='inner-dashboard-item'>
+										
+									</div>
+								</div>
+
+								<div class='dashboard-item dashboard-quarter-width dashboard-single-row col-xs-12 col-sm-12 col-md-3'>
+									<div class='inner-dashboard-item'>
+										
+									</div>
+								</div> -->
+							</div>
+						</div>	
+							
+						<div class='row'>
+							<div class='dashboard-items col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+								<div class='dashboard-item dashboard-full-width dashboard-single-row col-xs-12 col-sm-12'>
+									<div class='inner-dashboard-item' *ngIf='!empty'>
+										<h4>Firebase Errors</h4>
+										<div class='table-tabs-container'>
+											<!-- <div class='tabs'>
+												<p class='new-errors'>New</p>
+												<p class='viewed-errors'>Viewed</p>
+												<p class='resolved-errors'>Resolved</p>
+											</div> -->
+											<div class='error-tables'>
+												<table>
+													<thead>
+														<tr> 
+															<th>Error Code</th> 
+															<th>Date/time</th>
+															<th>Debug Path</th>
+															<th>Details</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr *ngFor="let item of list; let i = index;">
+															<td>{{item.errorCode}}</td>
+															<td>{{item.date}}</td>
+															<td>{{item.debugPath}}</td>
+															<td>{{item.errorDescription}}</td>
+														</tr>
+													</tbody>
+
+												</table>
+											</div>
+
+										</div>
+									</div>
+									<div class='inner-dashboard-item'>
+										<h4>Site Errors</h4>
+										<div class='table-tabs-container'>
+											<!-- <div class='tabs'>
+												<p class='new-errors'>New</p>
+												<p class='viewed-errors'>Viewed</p>
+												<p class='resolved-errors'>Resolved</p>
+											</div> -->
+											<div class='error-tables'>
+												<table>
+													<thead>
+														<tr> 
+															<th>Error Code</th> 
+															<th>Date/time</th>
+															<th>Status Code</th>
+															<th>Details</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr *ngFor="let log of logs | filter: searchText; let i = index;">
+															<td>{{i + 1}}</td>
+															<td>{{log.datetime * 1000 | date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
+															<td>{{log.reason.code}}</td>
+															<td>{{log.reason.detail}}</td>
+														</tr>
+													</tbody>
+
+												</table>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+							</div>
+						</div>

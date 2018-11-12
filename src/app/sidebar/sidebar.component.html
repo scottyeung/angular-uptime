@@ -1,0 +1,39 @@
+<div [@slideInOut]="visible" class='sidebar'>
+			<button (click)="toogle()" class='toggle-sidebar'></button>
+				
+				<div class='expanded-sidebar'>
+					<p class='sidebar-title'>PBS Marketing <span>Admin</span></p>
+					<ul class='full-menu'>
+						<li>Sites
+							<ul>
+								<li *ngFor="let link of links">
+									<a routerLink='{{link.data?.siteName.toLowerCase()}}'>
+											{{link.data?.siteName}}
+											<!-- <button class='edit' *ngIf='link.data?.siteName' (click)="link.data.showEdit = !link.data.showEdit">Edit</button> -->
+									</a>
+									<div class='edit__container' *ngIf='link.data?.showEdit'>
+										<input class='edit__field' [formControl]="Field" type='text' />
+										<button class='edit__submit' (click)="onSubmit(link.data?.id, editField)">Submit</button>
+									</div> 
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<p class='logout log-out'><a href='#'><i class="material-icons">exit_to_app</i>Log Out</a></p>
+				</div>
+				<div class='slim-sidebar'>
+					<img class='sidebar-title-img' src='/images/logo.svg' />	 
+					<ul class='slim-menu'>
+						<li class='dashboard'><a><img src='/images/dashboard.png' /> </a></li> 
+						<li><a><img src='/images/dashboard.png' /></a></li>
+						<li><a><img src='/images/dashboard.png' /></a></li>
+						<li><a><img src='/images/dashboard.png' /></a></li> 
+						<li><a><img src='/images/dashboard.png' /></a></li>
+						<li><a><img src='/images/dashboard.png' /></a></li>
+						<li><a><img src='/images/dashboard.png' /></a></li> 
+						<li><a><img src='/images/dashboard.png' /></a></li>   
+						<li><a href='#' class='logout logout-slim'> <img class='sidebar-logout-img' src='/images/logout.png' /> </a> </li>   
+					</ul>
+					  
+				</div>
+			</div>

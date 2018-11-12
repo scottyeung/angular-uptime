@@ -1,0 +1,24 @@
+<div class='dashboard-page-title'>
+    <p class='page-title'>Add Monitor</p>
+  </div>
+  <div class='dashboard-page-content'>
+    <div class='container'>						
+      <div class='row'>
+        <div class='dashboard-items col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+          <form [formGroup]="monitor" (submit)="addMonitor()">
+            <label>Monitor Name</label><input type="text" formControlName="friendly_name" required>
+            <label>URL</label><input type="text" formControlName="url" required>
+            <label>Type</label>
+            <select formControlName="type" required>
+              <option value="1">HTTPS</option>
+              <option value="2">Keyword</option>
+              <option value="3">Ping</option>
+              <option value="4">Port</option>
+            </select>
+            <p>Form Status: {{monitor.status}}</p>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+      </div>	
+    </div>
+  </div>

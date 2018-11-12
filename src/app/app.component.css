@@ -1,0 +1,9 @@
+body {
+    overflow: hidden;
+}
+
+.page-container ngx-loading-bar #loading-bar-spinner{
+    position: fixed;
+    top: 10px;
+    right: 0 !important;
+}
